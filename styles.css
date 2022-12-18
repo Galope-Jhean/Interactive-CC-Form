@@ -95,6 +95,15 @@ body {
     color: hsl(270, 3%, 87%);
 }
 
+.card-front > p:nth-of-type(4){
+    position: absolute;
+    top: 270px;
+    left: 342px;
+    font-size: .825rem;
+    color: hsl(270, 3%, 87%);
+}
+
+
 .card-details{
     position: absolute;
     margin-top: 375px;

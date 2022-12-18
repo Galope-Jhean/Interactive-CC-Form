@@ -33,7 +33,8 @@
           <img src="images/card-logo.svg" alt="Card Logo" class="cardlogo" />
           <p id="card-number">0000 0000 0000 0000</p>
           <p id="card-name">Jane Appleseed</p>
-          <p id="card-expiry">00/00</p>
+          <p id="card-expiry">00/</p>
+          <p id="card-expiry1">00</p>
         </div>
       </div>
 
@@ -50,10 +51,14 @@
         <label for="card-number">Card Number</label>
         <input
           id="number"
-          type="text"
           value=""
+          type="tel"
+          inputmode="numeric"
+          pattern="[0-9\s]{13,19}"
+          autocomplete="cc-number"
           name="number"
           placeholder="e.g. 1234 5678 9123 0000"
+          maxlength="19"
         />
 
         <label for="card-expiry">
@@ -68,8 +73,16 @@
             value=""
             name="month"
             placeholder="MM"
+            maxlength="2"
           />
-          <input id="year" type="text" value="" name="year" placeholder="YY" />
+          <input
+            id="year"
+            type="text"
+            value=""
+            name="year"
+            maxlength="2"
+            placeholder="YY"
+          />
 
           <input
             id="cvc"
