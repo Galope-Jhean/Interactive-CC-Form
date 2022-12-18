@@ -18,41 +18,25 @@
       rel="stylesheet"
     />
     <title>Frontend Mentor | Interactive card details form</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-      .card-details {
-        display: grid;
-      }
-      label,
-      input,
-      button {
-        margin: 5px 10px;
-        cursor: pointer;
-      }
-      body {
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 1.125rem;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main>
-      <div class="card-back">
-        <p id="card-cvc">000</p>
+      <div class="display">
+        <img src="images/bg-main-mobile.png" alt="background for mobile" />
+        <div class="card-back">
+          <img src="images/bg-card-back.png" alt="Card Back" />
+          <p id="card-cvc">000</p>
+        </div>
+        <div class="card-front">
+          <img src="images/bg-card-front.png" alt="Card Front" class="card" />
+          <img src="images/card-logo.svg" alt="Card Logo" class="cardlogo" />
+          <p id="card-number">0000 0000 0000 0000</p>
+          <p id="card-name">Jane Appleseed</p>
+          <p id="card-expiry">00/00</p>
+        </div>
       </div>
-      <div class="card-front">
-        <p id="card-number">0000 0000 0000 0000</p>
-        <p id="card-name">Jane Appleseed</p>
-        <p id="card-expiry">00/00</p>
-      </div>
+
       <div class="card-details">
         <label for="card-name">Cardholder Name</label>
         <input
@@ -62,6 +46,7 @@
           name="name"
           placeholder=" e.g. Jane Appleseed"
         />
+
         <label for="card-number">Card Number</label>
         <input
           id="number"
@@ -70,19 +55,33 @@
           name="number"
           placeholder="e.g. 1234 5678 9123 0000"
         />
-        <label for="card-expiry">Exp. Date(MM/YY)</label>
-        <input id="month" type="text" value="" name="month" placeholder="MM" />
-        <input id="year" type="text" value="" name="year" placeholder="YY" />
-        <label for="card-cvc">CVC</label>
-        <input
-          id="cvc"
-          type="text"
-          value=""
-          name="cvc"
-          placeholder="e.g. 123 Confirm"
-        />
-        <button>Confirm</button>
+
+        <label for="card-expiry">
+          Exp. Date(MM/YY)
+          <label for="card-cvc"> CVC</label>
+        </label>
+
+        <div class="exp-date">
+          <input
+            id="month"
+            type="text"
+            value=""
+            name="month"
+            placeholder="MM"
+          />
+          <input id="year" type="text" value="" name="year" placeholder="YY" />
+
+          <input
+            id="cvc"
+            type="text"
+            value=""
+            name="cvc"
+            placeholder="e.g. 123 Confirm"
+            maxlength="3"
+          />
+        </div>
       </div>
+      <button>Confirm</button>
 
       <!-- Completed state start -->
 
@@ -92,8 +91,9 @@
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
+        >. Coded by <a href="#">Jhean</a>.
       </div>
     </main>
   </body>
+  <script src="script.js"></script>
 </html>

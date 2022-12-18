@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.background-mobile{
+    width: 100%;
+    height: 350px;
+    position: relative;
+}
+
+#card-back{
+    position: relative;
+    top: -320px;
+    left: 200px;
+}
+
+#card-front{
+    position: relative;
+    top: 180px;
+    right: 150px;
+    position: fixed;
+}
