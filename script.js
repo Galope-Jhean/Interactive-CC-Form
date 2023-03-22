@@ -17,12 +17,9 @@ inputName.onkeyup = function () {
     name.innerHTML = this.value;
 }
 
-inputCN.addEventListener('keyup', cardNumber.textContent = this.value);
-
-inputCN.addEventListener('input', (e) => {
-    ccNum.value = ccNum.value.replace(/\D/g, '')
-    .replace(/^(.{4})(.{4})(.{4})(.*)$/, '$1 $2 $3 $4');
-})
+inputCN.onkeyup = function(){
+    cardNumber.textContent = this.value
+};
 
 inputMonth.onkeyup = function () {
     month.innerHTML = `${this.value}/`
