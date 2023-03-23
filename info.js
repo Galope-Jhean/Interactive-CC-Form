@@ -4,7 +4,7 @@ const inputCvc = document.getElementById('cvc');
 const name = document.getElementById('card-name');
 const inputName = document.getElementById('name');
 const cardNumber = document.getElementById('card-number');
-const inputCN = document.getElementById('number');
+const inputCN = document.querySelector('#number');
 const month = document.getElementById('card-expiry');
 const inputMonth = document.getElementById('month');
 const year = document.getElementById('card-expiry1');
@@ -17,18 +17,38 @@ inputName.onkeyup = function () {
     name.innerHTML = this.value;
 }
 
-inputCN.onkeyup = function(){
-    cardNumber.textContent = inputCN.value
-};
+inputCN.addEventListener('keyup', (e) => {
 
-const array = [];
+    if (!e.target.value) {
+        cardNumber.innerText = "1234 5678 9101 1121"
+    }
+    else {
+        const inputValue = e.target.value.replaceAll(" ", "");
 
-inputCN.addEventListener('input', (e) => {
-    inputCN.value = inputCN.value.replace(/\D/g, '')
-    .replace(/(\d{4})/g, '$1 ');
-    console.log(inputCN.value);
+        if (e.target.value.length > 14) {
+            e.target.value = inputValue.
+                replace(/(\d{4})(\d{4})(\d{4})(\d{0,4})/, "$1 $2 $3 $4");
+            cardNumber.innerText = inputValue.
+                replace(/(\d{4})(\d{4})(\d{4})(\d{0,4})/, "$1 $2 $3 $4");
+        }
+        else if (e.target.value.length > 9) {
+            e.target.value = inputValue.
+                replace(/(\d{4})(\d{4})(\d{0,4})/, "$1 $2 $3");
+            cardNumber.innerText = inputValue.
+                replace(/(\d{4})(\d{4})(\d{0,4})/, "$1 $2 $3");
+        }
+        else if (e.target.value.length > 4) {
+            e.target.value = inputValue.
+                replace(/(\d{4})(\d{0,4})/, "$1 $2");
+            cardNumber.innerText = inputValue.
+                replace(/(\d{4})(\d{0,4})/, "$1 $2");
+        }
+        else {
+            cardNumber.innerText = inputValue;
+        }
+    }
 })
-  
+
 
 inputMonth.onkeyup = function () {
     month.innerHTML = `${this.value}/`
