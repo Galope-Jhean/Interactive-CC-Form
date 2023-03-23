@@ -164,15 +164,51 @@ body {
     opacity: 50%;
 }
 
-button{
-    margin-top: 700px;
+#submit{
+    margin: 20px 0 0 10px;
     padding: 15px;
     border: none;
     background-color: hsla(278, 68%, 11%);
-    color: rgba(255, 255, 255, 80%);
+    color: rgba(255, 255, 255, 0.894);
     font-family: "Space Grotesk", sans-serif;
     font-size: 1.125rem;
     border-radius: 8px;
-    width: 400px;
-    margin-left: 45px;
 }
+
+#continue{
+    margin: auto;
+    padding: 15px;
+    border: none;
+    width: 300px;
+    background-color: hsla(278, 68%, 11%);
+    color: rgba(255, 255, 255, 0.894);
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.125rem;
+    border-radius: 8px;
+    z-index: 999;
+}
+
+.card-details.active{
+    opacity: 0;
+}
+
+
+.completed h3{
+    margin-top: -18px;
+    letter-spacing: 3px;
+}
+
+.completed{
+    width: 300px;
+    height: 300px;
+    margin-top: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+    place-items: center;
+}
+
+.completed.active{
+    display: grid;
+}
+

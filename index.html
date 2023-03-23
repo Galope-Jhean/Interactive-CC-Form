@@ -37,69 +37,78 @@
           <p id="card-expiry1">00</p>
         </div>
       </div>
-      <div class="card-details">
-        <label for="card-name">Cardholder Name</label>
-        <input
-          id="name"
-          type="text"
-          value=""
-          name="name"
-          placeholder=" e.g. Jane Appleseed"
-        />
-
-        <label for="card-number">Card Number</label>
-        <input
-          id="number"
-          value=""
-          type="tel"
-          inputmode="numeric"
-          pattern="[0-9\s]{13,19}"
-          autocomplete="cc-number"
-          name="number"
-          placeholder="e.g. 1234 5678 9123 0000"
-          maxlength="19"
-        />
-
-        <label for="card-expiry">
-          Exp. Date(MM/YY)
-          <label for="card-cvc"> CVC</label>
-        </label>
-
-        <div class="exp-date">
+      <fieldset>
+        <div class="card-details">
+          <label for="card-name">Cardholder Name</label>
           <input
-            id="month"
+            id="name"
             type="text"
             value=""
-            name="month"
-            placeholder="MM"
-            maxlength="2"
-            pattern="^(0?[1-9]|1[0-2])$"
-            maxlength="2" 
-            required
-          />
-          <input
-            id="year"
-            type="text"
-            value=""
-            name="year"
-            maxlength="2"
-            placeholder="YY"
+            name="name"
+            placeholder=" e.g. Jane Appleseed"
           />
 
+          <label for="card-number">Card Number</label>
           <input
-            id="cvc"
-            type="text"
+            id="number"
             value=""
-            name="cvc"
-            placeholder="e.g. 123 Confirm"
-            maxlength="3"
+            type="tel"
+            inputmode="numeric"
+            pattern="[0-9\s]{13,19}"
+            autocomplete="cc-number"
+            name="number"
+            placeholder="e.g. 1234 5678 9123 0000"
+            maxlength="19"
           />
+
+          <label for="card-expiry">
+            Exp. Date(MM/YY)
+            <label for="card-cvc"> CVC</label>
+          </label>
+
+          <div class="exp-date">
+            <input
+              id="month"
+              type="text"
+              value=""
+              name="month"
+              placeholder="MM"
+              inputmode="numeric"
+              maxlength="2"
+              pattern="^(0?[1-9]|1[0-2])$"
+              maxlength="2"
+            />
+            <input
+              id="year"
+              type="text"
+              value=""
+              name="year"
+              maxlength="2"
+              inputmode="numeric"
+              placeholder="YY"
+            />
+
+            <input
+              id="cvc"
+              type="text"
+              value=""
+              name="cvc"
+              inputmode="numeric"
+              placeholder="e.g. 123 Confirm"
+              maxlength="3"
+            />
+          </div>
+
+          <input type="submit" name="submit" id="submit" value="Confirm" />
         </div>
-      </div>
-      <button>Confirm</button>
-
+      </fieldset>
       <!-- Completed state start -->
-
+      <div class="completed">
+        <img src="images/icon-complete.svg">
+        <h3>THANK YOU!</h3>
+        <p>We've added your card details</p>
+        <button id="continue">Continue</button>
+      </div>
       <!--Thank you! We've added your card details Continue-->
 
       <div class="attribution">

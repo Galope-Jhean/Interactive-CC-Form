@@ -9,6 +9,11 @@ const month = document.getElementById('card-expiry');
 const inputMonth = document.getElementById('month');
 const year = document.getElementById('card-expiry1');
 const inputYear = document.getElementById('year');
+const submitBtn = document.querySelector("#submit");
+const proceed = document.querySelector("#continue")
+const cardDetails = document.querySelector('.card-details');
+const completeState = document.querySelector('.completed');
+
 inputCvc.onkeyup = function (e) {
     if (!e.target.value) {
         cvc.innerText = "000"
@@ -29,7 +34,7 @@ inputName.onkeyup = function (e) {
 inputCN.addEventListener('keyup', (e) => {
 
     if (!e.target.value) {
-        cardNumber.innerText = "1234 5678 9101 1121"
+        cardNumber.innerText = "0000 0000 0000 0000"
     }
     else {
         const inputValue = e.target.value.replaceAll(" ", "");
@@ -79,3 +84,15 @@ inputYear.onkeyup = function (e) {
         year.innerHTML = this.value;
     }
 }
+
+
+submitBtn.addEventListener('click', () => {
+    cardDetails.classList.add('active');
+    completeState.classList.add('active');
+});
+
+proceed.addEventListener('click', (e) => {
+    cardDetails.classList.remove('active');
+    completeState.classList.remove('active');
+})
+
