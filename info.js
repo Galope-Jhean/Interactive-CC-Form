@@ -9,12 +9,21 @@ const month = document.getElementById('card-expiry');
 const inputMonth = document.getElementById('month');
 const year = document.getElementById('card-expiry1');
 const inputYear = document.getElementById('year');
-inputCvc.onkeyup = function () {
-    cvc.innerHTML = this.value;
+inputCvc.onkeyup = function (e) {
+    if (!e.target.value) {
+        cvc.innerText = "000"
+    } else {
+        cvc.innerHTML = this.value;
+    }
 }
 
-inputName.onkeyup = function () {
-    name.innerHTML = this.value;
+inputName.onkeyup = function (e) {
+    if (!e.target.value) {
+        name.innerText = "Jane Appleseed"
+    }
+    else {
+        name.innerHTML = this.value;
+    }
 }
 
 inputCN.addEventListener('keyup', (e) => {
@@ -50,13 +59,23 @@ inputCN.addEventListener('keyup', (e) => {
 })
 
 
-inputMonth.onkeyup = function () {
-    month.innerHTML = `${this.value}/`
-    if (month.innerHTML === ' ') {
-        month.innerHTML = '00/'
+inputMonth.onkeyup = function (e) {
+    if (!e.target.value) {
+        month.innerText = "00/"
+    }
+    else {
+        month.innerHTML = `${this.value}/`
+        if (month.innerHTML === ' ') {
+            month.innerHTML = '00/'
+        }
     }
 }
 
-inputYear.onkeyup = function () {
-    year.innerHTML = this.value;
+inputYear.onkeyup = function (e) {
+    if (!e.target.value) {
+        year.innerText = "00"
+    }
+    else {
+        year.innerHTML = this.value;
+    }
 }
