@@ -94,5 +94,18 @@ submitBtn.addEventListener('click', () => {
 proceed.addEventListener('click', (e) => {
     cardDetails.classList.remove('active');
     completeState.classList.remove('active');
+    inputName.value = '';
+    name.innerText = "Jane Appleseed";
+    cvc.innerText = "000";
+    cardNumber.innerText = "0000 0000 0000 0000";
+    month.innerText = "00/";
+    year.innerText = "00";
+    cardNumber.value = '';
+    inputCN.value = '';
+    cvc.value = '';
+    inputCvc.value = "";
+    inputMonth.value = "";
+    inputYear.value = '';
+
 })
 

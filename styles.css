@@ -212,3 +212,9 @@ body {
     display: grid;
 }
 
+@media only screen and (min-width: 600px) {
+    #background{
+        display: none;
+    }
+  }
+
