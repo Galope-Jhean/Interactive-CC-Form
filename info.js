@@ -105,8 +105,8 @@ inputYear.onkeyup = function (e) {
 
 submitBtn.addEventListener('click', () => {
     if (inputName.value !== "" && inputCN.value !== "" && inputCvc.value !== "" 
-    && (inputMonth.value !== "" && inputMonth.value > 12) 
-    && (inputYear.value !== "" && inputYear.value < 22)) {
+    && inputMonth.value !== "" && inputMonth.value > 12 || inputMonth.value < 1
+    && inputYear.value !== "" && inputYear.value < 22) {
         cardDetails.classList.add('active');
         completeState.classList.add('active');
     }
