@@ -47,6 +47,7 @@
             name="name"
             placeholder=" e.g. Jane Appleseed"
           />
+          <label class="name" style="color: red;">name can't be empty</label>
 
           <label for="card-number">Card Number</label>
           <input
@@ -59,7 +60,9 @@
             name="number"
             placeholder="e.g. 1234 5678 9123 0000"
             maxlength="19"
+            onkeypress="return noAlphabet(event)"
           />
+          <label class="card-error" style="color: red;">card number can't be empty</label>
 
           <label for="card-expiry">
             Exp. Date(MM/YY)
@@ -78,6 +81,7 @@
               pattern="^(0?[1-9]|1[0-2])$"
               maxlength="2"
             />
+            
             <input
               id="year"
               type="text"
@@ -98,7 +102,12 @@
               maxlength="3"
             />
           </div>
-
+          <div>
+            <label class="cvc-error" style="color: red;">CVC is empty</label>
+            <label class="month-error" style="color: red;">Month is empty</label>
+            <label class="year-error" style="color: red;">Year is empty</label>
+          </div>
+          
           <input type="submit" name="submit" id="submit" value="Confirm" />
         </div>
       </fieldset>

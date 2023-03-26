@@ -127,6 +127,10 @@ body {
     font-size: 1.125rem;
 }
 
+.card-details>input.wrong{
+    border: 2px solid red;
+}
+
 .card-details>input::placeholder{
     
     color: hsl(279, 6%, 55%);
@@ -143,6 +147,47 @@ body {
     
     margin-bottom: 10px;
 }
+
+#month.wrong, #year.wrong, #cvc.wrong{
+    border: 2px solid red;
+}
+
+.name , .card-error{
+    font-size: 12px;
+    margin-top: -5px;
+    margin-left: 20px;
+    display: none;
+}
+
+.cvc-error{
+    font-size: 10px;
+    display: flex;
+    margin-top: -5px;
+    margin-left: 190px;
+
+}
+.month-error{
+    margin-top: -15px;
+    margin-left: 13px;
+}
+
+.year-error{
+    display: flex;
+    margin-top: -20px;
+    margin-left: 105px;
+}
+
+.year-error, .month-error, .cvc-error{
+    font-size: 10px;
+    display: none;
+}
+
+.name.wrong, .card-error.wrong,
+.cvc-error.wrong, .year-error.wrong, 
+.month-error.wrong{
+    display: block;
+}
+
 #month, #year{
     width: 80px;
 }
