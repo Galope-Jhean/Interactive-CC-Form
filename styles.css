@@ -276,7 +276,7 @@ body {
     }
     .display>#desktop-bg{
         display: block;
-        height: 100%;
+        height: 1150px;
         width: 620px;
     }
 
@@ -328,8 +328,8 @@ body {
         font-size: 1.6rem;
     }
     .card-details{
-        top: -100px;
-        left: 1100px;
+        top: -120px;
+        left: 1080px;
         width: 500px;
     }
     #month, #year{
