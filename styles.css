@@ -30,11 +30,15 @@ body {
 .display>#mobile-bg{
     width: 500px;
     height: 300px;
-    position: absolute;
+    position: relative;
 }
 
 .display>#desktop-bg{
     display: none;
+}
+
+.cardContainer{
+    margin-top: -280px;
 }
 
 .card-back{
@@ -115,6 +119,7 @@ body {
     width: 405px;
     display: grid;
     margin-left: 35px;
+    display: block;
 }
 
 .card-details>label{
@@ -254,6 +259,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     display: none;
+    z-index: 999;
     place-items: center;
 }
 
@@ -273,6 +279,11 @@ body {
         height: 100%;
         width: 620px;
     }
+
+    .cardContainer{
+        margin-top: -10px;
+    }
+
     .card-front{
         top: -1100px;
         left: 240px;
@@ -345,8 +356,8 @@ body {
 
     .completed.active{
         display: grid;
-        margin-top: -800px;
-        margin-right: 460px;
+        margin-top: -850px;
+        margin-right: 250px;
         width: 500px;
     }
 
